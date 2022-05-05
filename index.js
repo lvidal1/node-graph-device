@@ -9,6 +9,12 @@ const filterPositiveAndSortList = list => {
     return list.filter(num => num > 0).sort((a, b) => a - b);
 }
 
+const filterNegativeAndSortList = list => {
+    return list;
+}
+
+
 module.exports = {
-    filterPositiveAndSortList
+    filterPositiveAndSortList,
+    filterNegativeAndSortList,
 };
