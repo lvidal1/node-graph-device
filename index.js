@@ -14,7 +14,7 @@ const filterNegativeAndSortList = list => {
 }
 
 const filterZeros = list => {
-    return list;
+    return list.filter(num => num == 0);
 }
 
 
