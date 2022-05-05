@@ -1,0 +1,14 @@
+{
+  "name": "rooftop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:lvidal1/node-graph-device.git",
+  "author": "lvidal1 <lvida910@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^28.0.3"
+  }
+}
