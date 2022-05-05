@@ -6,7 +6,7 @@
 // 3. Print new list
 
 const filterPositiveAndSortList = list => {
-    return list;
+    return list.filter(num => num > 0).sort((a, b) => a - b);
 }
 
 module.exports = {
