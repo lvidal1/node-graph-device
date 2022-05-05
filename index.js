@@ -10,7 +10,7 @@ const filterPositiveAndSortList = list => {
 }
 
 const filterNegativeAndSortList = list => {
-    return list;
+    return list.filter(num => num < 0).sort((a, b) => a - b);
 }
 
 
