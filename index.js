@@ -92,6 +92,10 @@ const createLayoutMatrix = (list) => {
     return list.map((number, position) => createLayoutRow(list, position));
 }
 
+const renderLayoutMatrix = (list) => {
+    return "";
+}
+
 module.exports = {
     filterPositiveAndSortList,
     filterNegativeAndSortList,
@@ -100,4 +104,5 @@ module.exports = {
     generateRenderList,
     createLayoutRow,
     createLayoutMatrix,
+    renderLayoutMatrix
 };
