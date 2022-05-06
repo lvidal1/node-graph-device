@@ -92,8 +92,14 @@ const createLayoutMatrix = (list) => {
     return list.map((number, position) => createLayoutRow(list, position));
 }
 
+/**
+ * It takes a list of items and returns a matrix of the items, where the matrix is a list of rows,
+ * where each row is a list of items.
+ * @param list - array
+ * @returns A string of the layout matrix.
+ */
 const renderLayoutMatrix = (list) => {
-    return "";
+    return createLayoutMatrix(list).join("\n");
 }
 
 module.exports = {
