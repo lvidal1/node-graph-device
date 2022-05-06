@@ -1,4 +1,4 @@
-const { filterPositiveAndSortList, filterNegativeAndSortList, filterZeros, buildList, generateRenderList } = require("./index.js");
+const { filterPositiveAndSortList, filterNegativeAndSortList, filterZeros, buildList, generateRenderList, createLayoutRow, createLayoutMatrix, renderLayoutMatrix } = require("./index.js");
 
 describe('sort phase', () => {
     test('should filter & sort positive integers', () => {
@@ -30,5 +30,39 @@ describe('build phase', () => {
         const list = [-1, 10, 3, 0, -4, 2, 0];
         const expected = [2, 3, 10, 0, 0, -4, -1];
         expect(generateRenderList(list)).toEqual(expected);
+    });
+})
+
+
+describe('print phase', () => {
+    test('should create the first layout row', () => {
+        const list = [7, 0, -2];
+        const expected = " 7 ** **";
+        expect(createLayoutRow(list, 0)).toEqual(expected);
+    });
+    test('should create the third layout row', () => {
+        const list = [7, 0, -2];
+        const expected = "** ** -2";
+        expect(createLayoutRow(list, 2)).toEqual(expected);
+    });
+    test('should create the fifth layout row using a 2-digits number', () => {
+        const list = [1, 3, 5, 7, 10, 0, -3];
+        const expected = "** ** ** ** 10 ** **";
+        expect(createLayoutRow(list, 4)).toEqual(expected);
+    });
+    test('should create the last layout row using a negative number', () => {
+        const list = [1, 3, 5, 7, 10, 0, -3];
+        const expected = "** ** ** ** ** ** -3";
+        expect(createLayoutRow(list, 6)).toEqual(expected);
+    });
+    test('should create the layout matrix', () => {
+        const list = [7, 0, -2];
+        const expected = [" 7 ** **", "**  0 **", "** ** -2"];
+        expect(createLayoutMatrix(list)).toEqual(expected);
+    });
+    test('should create the layout string to be rendered in console', () => {
+        const list = [7, 0, -2];
+        const expected = " 7 ** **\n**  0 **\n** ** -2";
+        expect(renderLayoutMatrix(list)).toEqual(expected);
     });
 })
