@@ -82,8 +82,14 @@ const createLayoutRow = (list, position) => {
         .join(" ");
 }
 
+/**
+ * Create a matrix of the same size as the input list, where each row is a list of the same size as
+ * the input list
+ * @param list - array
+ * @returns array.
+ */
 const createLayoutMatrix = (list) => {
-    return [];
+    return list.map((number, position) => createLayoutRow(list, position));
 }
 
 module.exports = {
