@@ -1,16 +1,16 @@
-// Node Graph Device
+// Node - Graph device matrix
 
 // The device will follow 3 main steps:
 // 1. Sort input list
 // 2. Build new list
-// 3. Print new list
+// 3. Print new list (matrix)
 
 
 const Matrix = () => {
     /**
- * Filter out all negative numbers from the list and sort the remaining numbers in ascending order.
- * @returns array
- */
+     * Filter out all negative numbers from the list and sort the remaining numbers in ascending order.
+     * @returns array
+     */
     const filterPositiveAndSortList = list => {
         return list.filter(num => num > 0).sort((a, b) => a - b);
     }
