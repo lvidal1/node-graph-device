@@ -42,9 +42,15 @@ const buildList = (positivePartial, negativePartial, zerosPartial) => {
     return [...positivePartial, ...zerosPartial, ...negativePartial];
 }
 
+const generateRenderList = (list) => {
+    return 0;
+}
+
+
 module.exports = {
     filterPositiveAndSortList,
     filterNegativeAndSortList,
     filterZeros,
-    buildList
+    buildList,
+    generateRenderList
 };
