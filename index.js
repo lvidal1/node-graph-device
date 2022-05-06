@@ -30,11 +30,17 @@ const filterZeros = list => {
     return list.filter(num => num == 0);
 }
 
-
+/**
+ * Given a list of positive numbers, a list of negative numbers, and a list of zeros, return a list of
+ * the positive numbers, followed by the zeros, followed by the negative numbers.
+ * @param positivePartial array
+ * @param negativePartial array
+ * @param zerosPartial array
+ * @returns array
+ */
 const buildList = (positivePartial, negativePartial, zerosPartial) => {
-    return 0;
+    return [...positivePartial, ...zerosPartial, ...negativePartial];
 }
-
 
 module.exports = {
     filterPositiveAndSortList,
