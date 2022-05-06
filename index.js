@@ -42,8 +42,18 @@ const buildList = (positivePartial, negativePartial, zerosPartial) => {
     return [...positivePartial, ...zerosPartial, ...negativePartial];
 }
 
+/**
+ * It takes a list of numbers, apply sort & filter mechanism to create an new ordered list 
+ * ready for rendering
+ * @param list array
+ * @returns array.
+ */
 const generateRenderList = (list) => {
-    return 0;
+    return buildList(
+        filterPositiveAndSortList(list),
+        filterNegativeAndSortList(list),
+        filterZeros(list),
+    );
 }
 
 
