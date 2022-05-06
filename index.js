@@ -31,8 +31,14 @@ const filterZeros = list => {
 }
 
 
+const buildList = (positivePartial, negativePartial, zerosPartial) => {
+    return 0;
+}
+
+
 module.exports = {
     filterPositiveAndSortList,
     filterNegativeAndSortList,
-    filterZeros
+    filterZeros,
+    buildList
 };
