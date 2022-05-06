@@ -37,8 +37,8 @@ describe('build phase', () => {
 describe('print phase', () => {
     test('should create the first layout row', () => {
         const list = [7, 0, -2];
-        const expected = "7 ** **";
-        expect(createLayoutRow(list)).toEqual(expected);
+        const expected = " 7 ** **";
+        expect(createLayoutRow(list, 0)).toEqual(expected);
     });
 
 })

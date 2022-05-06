@@ -56,8 +56,30 @@ const generateRenderList = (list) => {
     );
 }
 
+/**
+ * Creates a string based on specific layout that contains a item list on a specific position.
+ * It creates a new array of the same length as the input array, fills it with placeholders, fills the
+ * requested position with the requested number, and joins all items with a space.
+ * @param list - array
+ * @param position - The position of the number in the list
+ * @returns string
+ */
 const createLayoutRow = (list, position) => {
-    return "";
+    // Format number
+    const number = list[position];
+    const formatNumber = (number < 0 || number > 9) ? number : " " + number;
+    // Calculate column length
+    const columnLength = list.length;
+    // Define a new based on column lenght 
+    const row = new Array(columnLength);
+    // Resolve layout row
+    return row
+        // Fill all items with placeholder
+        .fill("**")
+        // Fill requested position with format number
+        .fill(formatNumber, position, position + 1)
+        // Join all items with a space
+        .join(" ");
 }
 
 
