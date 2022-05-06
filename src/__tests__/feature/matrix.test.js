@@ -1,4 +1,6 @@
-const { createLayoutMatrix, renderLayoutMatrix } = require("../../matrix.js");
+const Matrix = require("../../matrix");
+
+const { createLayoutMatrix, renderLayoutMatrix } = Matrix();
 
 describe('print phase', () => {
     test('should create the layout matrix', () => {

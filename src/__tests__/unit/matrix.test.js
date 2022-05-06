@@ -1,4 +1,6 @@
-const { filterPositiveAndSortList, filterNegativeAndSortList, filterZeros, buildList, generateRenderList, createLayoutRow } = require("../../matrix.js");
+const Matrix = require("../../matrix");
+
+const { filterPositiveAndSortList, filterNegativeAndSortList, filterZeros, buildList, generateRenderList, createLayoutRow } = Matrix();
 
 describe('sort phase', () => {
     test('should filter & sort positive integers', () => {
