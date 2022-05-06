@@ -5,14 +5,27 @@
 // 2. Create new list
 // 3. Print new list
 
+
+/**
+ * Filter out all negative numbers from the list and sort the remaining numbers in ascending order.
+ * @returns array
+ */
 const filterPositiveAndSortList = list => {
     return list.filter(num => num > 0).sort((a, b) => a - b);
 }
 
+/**
+ * Filter the list to only include negative numbers, then sort the list in ascending order.
+ * @returns array
+ */
 const filterNegativeAndSortList = list => {
     return list.filter(num => num < 0).sort((a, b) => a - b);
 }
 
+/**
+ * FilterZeros takes a list and returns a list of all the zeros in the list.
+ * @returns array
+ */
 const filterZeros = list => {
     return list.filter(num => num == 0);
 }
