@@ -6,6 +6,7 @@
   "author": "lvidal1 <lvida910@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "start": "node src/index.js",
     "test": "jest"
   },
   "devDependencies": {
