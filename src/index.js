@@ -2,7 +2,6 @@ const Matrix = require("./matrix");
 
 const { generateRenderList, renderLayoutMatrix } = Matrix();
 
-
 // Main
 
 const readline = require('readline').createInterface({
