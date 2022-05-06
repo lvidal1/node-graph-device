@@ -40,5 +40,19 @@ describe('print phase', () => {
         const expected = " 7 ** **";
         expect(createLayoutRow(list, 0)).toEqual(expected);
     });
-
+    test('should create the third layout row', () => {
+        const list = [7, 0, -2];
+        const expected = "** ** -2";
+        expect(createLayoutRow(list, 2)).toEqual(expected);
+    });
+    test('should create the fifth layout row using a 2-digits number', () => {
+        const list = [1, 3, 5, 7, 10, 0, -3];
+        const expected = "** ** ** ** 10 ** **";
+        expect(createLayoutRow(list, 4)).toEqual(expected);
+    });
+    test('should create the last layout row using a negative number', () => {
+        const list = [1, 3, 5, 7, 10, 0, -3];
+        const expected = "** ** ** ** ** ** -3";
+        expect(createLayoutRow(list, 6)).toEqual(expected);
+    });
 })
