@@ -82,6 +82,9 @@ const createLayoutRow = (list, position) => {
         .join(" ");
 }
 
+const createLayoutMatrix = (list) => {
+    return [];
+}
 
 module.exports = {
     filterPositiveAndSortList,
@@ -89,5 +92,6 @@ module.exports = {
     filterZeros,
     buildList,
     generateRenderList,
-    createLayoutRow
+    createLayoutRow,
+    createLayoutMatrix,
 };
