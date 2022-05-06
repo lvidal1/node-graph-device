@@ -56,11 +56,16 @@ const generateRenderList = (list) => {
     );
 }
 
+const createLayoutRow = (list, position) => {
+    return "";
+}
+
 
 module.exports = {
     filterPositiveAndSortList,
     filterNegativeAndSortList,
     filterZeros,
     buildList,
-    generateRenderList
+    generateRenderList,
+    createLayoutRow
 };

@@ -1,4 +1,4 @@
-const { filterPositiveAndSortList, filterNegativeAndSortList, filterZeros, buildList, generateRenderList } = require("./index.js");
+const { filterPositiveAndSortList, filterNegativeAndSortList, filterZeros, buildList, generateRenderList, createLayoutRow } = require("./index.js");
 
 describe('sort phase', () => {
     test('should filter & sort positive integers', () => {
@@ -31,4 +31,14 @@ describe('build phase', () => {
         const expected = [2, 3, 10, 0, 0, -4, -1];
         expect(generateRenderList(list)).toEqual(expected);
     });
+})
+
+
+describe('print phase', () => {
+    test('should create the first layout row', () => {
+        const list = [7, 0, -2];
+        const expected = "7 ** **";
+        expect(createLayoutRow(list)).toEqual(expected);
+    });
+
 })
