@@ -14,7 +14,7 @@ yarn start
 
 ## See in action
 
-:rocket: After run the `yarn start` command, enter the items to print on the matrix. Separate each item with a comma (,)
+:rocket: After running the `yarn start` command, enter the items to print on the matrix. Separate each item with a comma (,)
 
 :rocket: You will get the items rendered on a matrix in console.
 
